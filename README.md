@@ -11,6 +11,9 @@
         
         https://0xma.github.io/hacking/metasploit_privilege_escalation.html
         use post/multi/recon/local_exploit_suggester
+
+        https://blog.geekinstitute.org/2025/06/windows-privilege-escalation-using-metasploit.html
+
 # Decompiler ilspy
 
     https://github.com/icsharpcode/ILSpy   ---->>>> https://github.com/icsharpcode/AvaloniaILSpy
