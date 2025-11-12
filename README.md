@@ -3,8 +3,14 @@
 
 # Все уязвимости вмндовс
 
+
     https://msrc.microsoft.com/update-guide/vulnerability
 
+    
+# Escalating Privileges with Metasploit's Local Exploit Suggester
+        
+        https://0xma.github.io/hacking/metasploit_privilege_escalation.html
+        use post/multi/recon/local_exploit_suggester
 # Decompiler ilspy
 
     https://github.com/icsharpcode/ILSpy   ---->>>> https://github.com/icsharpcode/AvaloniaILSpy
