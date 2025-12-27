@@ -8,6 +8,14 @@
 
     
 # Escalating Privileges with Metasploit's Local Exploit Suggester
+        CTRL+Z
+        
+        msf> use post/multi/recon/local_exploit_suggester
+        msf> set session 1
+        msf> set validatearch false # без этого у меня не заработало
+        msf> run
+
+
         
         https://0xma.github.io/hacking/metasploit_privilege_escalation.html
         use post/multi/recon/local_exploit_suggester
