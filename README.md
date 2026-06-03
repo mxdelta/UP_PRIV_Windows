@@ -47,11 +47,25 @@ wmic product get name
 
             grep -rn /mnt/Finance/ -ie cred
             
+    findstr /SI /M "password" *.xml *.ini *.txt
+    findstr /si password *.xml *.ini *.txt *.config
+    findstr /spin "password" *.*
+
+    ----Search for File Extensions
+    Get-ChildItem C:\ -Recurse -Include *.rdp, *.config, *.vnc, *.cred, *.sqlite  -ErrorAction Ignore
+    ----Sticky Notes Passwords
+    C:\Users\htb-student\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState
+    https://github.com/RamblingCookieMonster/PSSQLite/tree/master/PSSQLite
+    Set-ExecutionPolicy Bypass -Scope Process
+    Import-Module .\PSSQLite.psd1
+    $db = 'C:\Users\htb-student\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite'
+    PS C:\htb> Invoke-SqliteQuery -Database $db -Query "SELECT Text FROM Note" | ft -wrap
+    
     gci -recurse -force -include *.txt,*.ini,*.xml,*.cfg | select-string password
     
     gci -path . -recurse -ea SilentlyContinue -Include *.ini,*.yml,*.ps1,*cfg | select-string pass
     
-    cd C:\ & findstr /s /p /i /n /m "password" *.xml *.ini *.txt *.config *.vbs
+    cd C:\ & findstr /s /p /i /n /m "password" *.xml *.ini *.txt *.config *.vbs 
 
     findstr /s /p /i /n /m "password" \\ta-d.local\SYSVOL\*.xml *.ini *.txt *.config *.vbs
 # Учетные данные (DPAPI)
