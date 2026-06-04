@@ -68,6 +68,16 @@ wmic product get name
     cd C:\ & findstr /s /p /i /n /m "password" *.xml *.ini *.txt *.config *.vbs 
 
     findstr /s /p /i /n /m "password" \\ta-d.local\SYSVOL\*.xml *.ini *.txt *.config *.vbs
+
+# Cmdkey Сохраненные учетные данные
+    cmdkey /list
+
+
+
+
+
+
+
 # Учетные данные (DPAPI)
 
         https://github.com/login-securite/DonPAPI
@@ -152,6 +162,9 @@ reg query HKLM /f password /t REG_SZ /s | findstr /s flag
     https://github.com/hfiref0x/UACME
 msconfig
 azman.msc
+
+
+
 
 # подключить сетевой диск
 
